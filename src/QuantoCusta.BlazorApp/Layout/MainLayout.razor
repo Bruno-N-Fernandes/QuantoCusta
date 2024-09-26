@@ -1,0 +1,24 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider @bind-IsDarkMode="@DarkModeThemeEnabled" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+	<MudAppBar Dense Elevation="1">
+		<MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(e => DrawerToggle())" />
+		<MudToggleIconButton @bind-Toggled="@DarkModeThemeEnabled" Icon="@Icons.Material.Filled.LightMode" Variant="Variant.Filled" Color="Color.Primary" ToggledIcon="@Icons.Material.Filled.DarkMode" />
+		<TopBar OnChange="NotifyChange" />
+	</MudAppBar>
+	<MudDrawer @bind-Open="DrawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+		<SideBarMenu />
+	</MudDrawer>
+	<MudMainContent>
+		@Body
+		@* @if (Swap) { @Body } else { @Body } *@
+		<MudScrollToTop>
+			<MudFab Size="Size.Small" Color="Color.Primary" StartIcon="@Icons.Material.Filled.ArrowUpward" />
+		</MudScrollToTop>
+	</MudMainContent>
+</MudLayout>

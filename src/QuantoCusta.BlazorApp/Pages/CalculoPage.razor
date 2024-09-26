@@ -1,0 +1,47 @@
+﻿<PageTitle>Quanto Custa</PageTitle>
+
+
+<MudPaper Height="100%" Width="100%">
+	<MudContainer MaxWidth="MaxWidth.Small">
+		<MudNumericField @bind-Value="Repositorio.Config.AliquotaFGTS"  Placeholder="Aliquota FGTS" Label="Aliquota FGTS" Variant="Variant.Outlined"   Min="0.00M" Max="1.00M" Step="0.01M" />
+		<MudNumericField @bind-Value="Repositorio.Config.AliquotaINSS"  Placeholder="Aliquota INSS" Label="Aliquota INSS" Variant="Variant.Outlined"   Min="0.00M" Max="1.00M" Step="0.01M" />
+		<MudNumericField @bind-Value="Repositorio.Config.AliquotaVT"    Placeholder="Aliquota VT" Label="Aliquota VT" Variant="Variant.Outlined"       Min="0.00M" Max="1.00M" Step="0.01M" />
+		<MudNumericField @bind-Value="Repositorio.Config.PrecoPassagem" Placeholder="Preço Passagem" Label="Preço Passagem" Variant="Variant.Outlined" Min="0.00M" Max="1.00M" Step="0.01M" />
+	</MudContainer>
+
+	<MudDivider />
+
+	<MudContainer MaxWidth="MaxWidth.Small">
+		<MudSelect T="Profissao" @bind-Value="Profissao" Label="Profissão" Variant="Variant.Outlined" Margin="Margin.Dense" Dense="true" Clearable="true" SelectedValuesChanged="NotifyChange" >
+			@foreach (var profissao in Repositorio.Profissoes)
+			{
+				<MudSelectItem T="Profissao" Value="profissao">@($"{profissao.CBO} - {profissao.Descricao}")</MudSelectItem>
+			}
+		</MudSelect>
+
+		<MudTextField @bind-Value="Profissao.CBO" Placeholder="CBO" Variant="Variant.Outlined" ReadOnly="true" />
+		<MudTextField @bind-Value="Profissao.Descricao" Placeholder="Descrição" Label="Descrição" Variant="Variant.Outlined" ReadOnly="true" />
+		<MudNumericField @bind-Value="Profissao.PisoRemuneracao" Placeholder="Piso da Remuneracao" Label="Piso da Remuneracao" Variant="Variant.Outlined" Min="1" Step="10" />
+		<MudNumericField @bind-Value="Profissao.QuantidadeDiasExpediente" Placeholder="Quantidade Dias Expediente Mensal" Label="Quantidade Dias Expediente Mensal" Variant="Variant.Outlined" Min="1" Max="31" Step="1" />
+		<MudNumericField @bind-Value="Profissao.PercentualAdicionalPericulosidade" Placeholder="Percentual Adicional Periculosidade" Label="Percentual Adicional Periculosidade" Variant="Variant.Outlined" Min="0.00M" Max="2.00M" Step="0.01M" />
+		<MudNumericField @bind-Value="Profissao.PercentualAdicionalInsalubridade" Placeholder="Percentual Adicional Insalubridade" Label="Percentual Adicional Insalubridade" Variant="Variant.Outlined" Min="0.00M" Max="2.00M" Step="0.01M" />
+		<MudNumericField @bind-Value="Profissao.PercentualAdicionalNoturno" Placeholder="Percentual Adicional Noturno" Label="Percentual Adicional Noturno" Variant="Variant.Outlined" Min="0.00M" Max="2.00M" Step="0.01M" />
+	</MudContainer>
+
+	<MudDivider />
+
+	<MudContainer MaxWidth="MaxWidth.Small">
+		<MudNumericField Value="CalculoCusto.Remuneracao" />
+		<MudNumericField Value="CalculoCusto.Provisao13Salario" />
+		<MudNumericField Value="CalculoCusto.ProvisaoFerias" />
+		<MudNumericField Value="CalculoCusto.ProvisaoAdicionalFerias" />
+		<MudNumericField Value="CalculoCusto.ValorINSS" />
+		<MudNumericField Value="CalculoCusto.ValorFGTS" />
+		<MudNumericField Value="CalculoCusto.TransporteFuncionario" />
+		<MudNumericField Value="CalculoCusto.CustoTransporte" />
+		<MudNumericField Value="CalculoCusto.ValorVT" />
+		<MudNumericField Value="CalculoCusto.CustoTotal" />
+	</MudContainer>
+</MudPaper>
+
+
