@@ -1,12 +1,12 @@
-﻿using System.Xml.Linq;
-
-namespace QuantoCusta.BlazorApp.Code
+﻿namespace QuantoCusta.BlazorApp.Code
 {
 	public class Profissao
 	{
 		public string CBO { get; set; }
 		public string Descricao { get; set; }
-		public decimal PisoRemuneracao { get; set; }
+		public decimal PisoSalarial { get; set; }
+		public decimal TetoSalarial { get; set; }
+		public decimal Remuneracao { get; set; }
 		public decimal PercentualAdicionalNoturno { get; set; }
 		public decimal PercentualAdicionalPericulosidade { get; set; }
 		public decimal PercentualAdicionalInsalubridade { get; set; }
