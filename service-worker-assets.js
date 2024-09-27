@@ -1,6 +1,10 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
+      "hash": "sha256-KHlwQxBJI\/xSM8FF9i4pPUq4pD\/0e3RNao0ixebLKAw=",
+      "url": ".gitattributes"
+    },
+    {
       "hash": "sha256-JOZWd9XYwDyrwjSB0PVTcc602GisYED21qQUCSMlGtI=",
       "url": "css\/app.css"
     },
@@ -31,6 +35,14 @@
     {
       "hash": "sha256-AUBRnt38oQkOPUriNnqVdA89XGZ0brFG9zUqNgsMKwQ=",
       "url": "manifest.webmanifest"
+    },
+    {
+      "hash": "sha256-6BJG3vbOF6pqiQ7JQKRZ1N\/OQl2V1anylMSTZW8xNPo=",
+      "url": "routes.json"
+    },
+    {
+      "hash": "sha256-6HP\/KO49Pn7zQ9jS\/Z4NhBBwLo9+oAjL3jlBjKmVA8g=",
+      "url": "staticwebapp.config.json"
     },
     {
       "hash": "sha256-gvHfnndfEu1tRf0rFb5988rWq7ITIotOaE8+AMbKYbc=",
@@ -65,7 +77,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-uO3q7KuD9FG\/UvXYd3e6e7xOTrMfAGtD5u3H1fkmI5Q=",
+      "hash": "sha256-lH0sJRJ9Xcr88SmBnPUTHaAjwG+8mW9b9SGv5TzeE6k=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -165,7 +177,7 @@
       "url": "_framework\/Newtonsoft.Json.wasm"
     },
     {
-      "hash": "sha256-C6ObNnLLPDA5qBpWSL3\/CnFg\/TzmssRosyORgwxiip8=",
+      "hash": "sha256-JQTGs1Nk1oDsXl58O\/c4uCDyqABv2r+VQShvWtuno1A=",
       "url": "_framework\/QuantoCusta.BlazorApp.wasm"
     },
     {
@@ -365,5 +377,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "0HU50M\/y"
+  "version": "6ez7gVk\/"
 };
