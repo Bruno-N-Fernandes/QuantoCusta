@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "QuantoCusta.BlazorApp",
   "resources": {
-    "hash": "sha256-M7MxV1giMxFpFzmSgrbIVsFkriF5AnNeV/aSjfvwqjQ=",
+    "hash": "sha256-JZZITGF63hLg1D2g7YjwV7Vb01XML0mV3zKDnwl0Eng=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.746giovk6l.js": "sha256-juC5sA7gHTLXFEhAKgdM2/RavswpwCtDfjYGsAz2FXg="
     },
@@ -41,7 +41,7 @@
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-sLSiCKh0RQEV/2cl05tr7wOLWzExQfPZovvpqYLJduQ=",
       "MudBlazor.wasm": "sha256-yPIhzuq6dbU/1Hd6542DhAeymTqPs9WHbZqB8TDeXO8=",
       "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
-      "QuantoCusta.BlazorApp.wasm": "sha256-JQTGs1Nk1oDsXl58O/c4uCDyqABv2r+VQShvWtuno1A=",
+      "QuantoCusta.BlazorApp.wasm": "sha256-7djL/b0L/yPH+OvTjFgvscDHmk6y2hGOxu26GJW6UNQ=",
       "System.Collections.Concurrent.wasm": "sha256-5gj5rOaMnRjJSNt/49+NNcoRSJ1rxjpM0jFv5hvdF4g=",
       "System.Collections.Immutable.wasm": "sha256-MM6ObSzWqcVgBukb6t0YKRPS/qELhLctrrjeN+ZSa/w=",
       "System.Collections.NonGeneric.wasm": "sha256-sK8kDnVci1HIJi248etu7BdPdUYv/5OTn6F3IIrht2A=",
