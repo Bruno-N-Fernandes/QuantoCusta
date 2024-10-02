@@ -4,9 +4,9 @@ namespace QuantoCusta.BlazorApp.Code
 {
 	public static class Factory
 	{
-		public static IEnumerable<Config> CreateConfig()
+		public static IEnumerable<Configuracao> CreateConfiguracao()
 		{
-			yield return new Config
+			yield return new Configuracao
 			{
 				AliquotaINSS = 0.33M,
 				AliquotaFGTS = 0.08M,
@@ -23,7 +23,6 @@ namespace QuantoCusta.BlazorApp.Code
 				Descricao = "Atendente",
 				PisoSalarial = 1907.49M,
 				TetoSalarial = 1907.49M,
-				Remuneracao = 1907.49M,
 				PercentualAdicionalNoturno = 0.20M,
 				PercentualAdicionalPericulosidade = 0.20M,
 				PercentualAdicionalInsalubridade = 0.20M,
@@ -36,7 +35,6 @@ namespace QuantoCusta.BlazorApp.Code
 				Descricao = "Frentista",
 				PisoSalarial = 1977.40M,
 				TetoSalarial = 1977.40M,
-				Remuneracao = 1977.40M,
 				PercentualAdicionalNoturno = 0.20M,
 				PercentualAdicionalPericulosidade = 0.20M,
 				PercentualAdicionalInsalubridade = 0.20M,

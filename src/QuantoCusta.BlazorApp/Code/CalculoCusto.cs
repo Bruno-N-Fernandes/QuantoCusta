@@ -5,7 +5,7 @@ namespace QuantoCusta.BlazorApp.Code
 	public class CalculoCusto
 	{
 		public Profissao Profissao { get; }
-		public Config Config { get; }
+		public Configuracao Configuracao { get; }
 
 		public bool TemAdicionalNoturno { get; set; }
 		public bool TemAdicionalInsalubridade { get; set; }
@@ -22,19 +22,19 @@ namespace QuantoCusta.BlazorApp.Code
 		public decimal ProvisaoAdicionalFerias => ProvisaoFerias / 3M;
 		public decimal RemuneracaoProvisao => RemuneracaoTotal + Provisao13Salario + ProvisaoFerias + ProvisaoAdicionalFerias;
 
-		public decimal ValorINSS => RemuneracaoProvisao * Config.AliquotaINSS;
-		public decimal ValorFGTS => RemuneracaoProvisao * Config.AliquotaFGTS;
-		public decimal TransporteFuncionario => RemuneracaoTotal * Config.AliquotaVT;
-		public decimal CustoTransporte => Config.PrecoPassagem * Profissao.QuantidadeDiasExpediente * 2;
+		public decimal ValorINSS => RemuneracaoProvisao * Configuracao.AliquotaINSS;
+		public decimal ValorFGTS => RemuneracaoProvisao * Configuracao.AliquotaFGTS;
+		public decimal TransporteFuncionario => RemuneracaoTotal * Configuracao.AliquotaVT;
+		public decimal CustoTransporte => Configuracao.PrecoPassagem * Profissao.QuantidadeDiasExpediente * 2;
 		public decimal ValorVT => Math.Max(0M, CustoTransporte - TransporteFuncionario);
 		public decimal CustoTotal => RemuneracaoProvisao + ValorINSS + ValorFGTS + ValorVT;
 
 
-		public CalculoCusto(Config config, Profissao profissao)
+		public CalculoCusto(Configuracao configuracao, Profissao profissao)
 		{
-			Config = config;
+			Configuracao = configuracao;
 			Profissao = profissao;
-			RemuneracaoBase = profissao.Remuneracao;
+			RemuneracaoBase = profissao.PisoSalarial;
 		}
 	}
 }

@@ -6,13 +6,13 @@ namespace QuantoCusta.BlazorApp.Code
 {
 	public class Repositorio
 	{
-		public List<Config> Configs { get; } = [];
+		public List<Configuracao> Configuracoes { get; } = [];
 		public List<Profissao> Profissoes { get; } = [];
-		public Config Config => Configs.FirstOrDefault();
+		public Configuracao Configuracao => Configuracoes.FirstOrDefault();
 
 		public async Task Load()
 		{
-			Configs.AddRange(Factory.CreateConfig());
+			Configuracoes.AddRange(Factory.CreateConfiguracao());
 			Profissoes.AddRange(Factory.CreateProfissao());
 			await Task.CompletedTask;
 		}

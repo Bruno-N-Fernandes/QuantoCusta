@@ -1,0 +1,8 @@
+﻿<PageTitle>Configuração</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Small">
+	<PercentualField @bind-Value="Configuracao.AliquotaFGTS" Placeholder="Alíquota de FGTS" Label="Alíquota de FGTS" Variant="Variant.Outlined" />
+	<PercentualField @bind-Value="Configuracao.AliquotaINSS" Placeholder="Alíquota de INSS" Label="Alíquota de INSS" Variant="Variant.Outlined" />
+	<PercentualField @bind-Value="Configuracao.AliquotaVT" Placeholder="Alíquota de Vale Transporte" Label="Alíquota de Vale Transporte" Variant="Variant.Outlined" />
+	<MudNumericField @bind-Value="Configuracao.PrecoPassagem" Placeholder="Preço da Passagem" Label="Preço da Passagem" Variant="Variant.Outlined" Min="0.01M" Step="0.01M" Format="#0.00" />
+</MudContainer>

@@ -6,7 +6,6 @@
 		public string Descricao { get; set; }
 		public decimal PisoSalarial { get; set; }
 		public decimal TetoSalarial { get; set; }
-		public decimal Remuneracao { get; set; }
 		public decimal PercentualAdicionalNoturno { get; set; }
 		public decimal PercentualAdicionalPericulosidade { get; set; }
 		public decimal PercentualAdicionalInsalubridade { get; set; }

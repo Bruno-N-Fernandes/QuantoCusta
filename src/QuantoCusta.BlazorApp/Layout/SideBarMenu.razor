@@ -1,8 +1,9 @@
-﻿
-<MudNavMenu>
-	<MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home" IconColor="Color.Inherit">Home</MudNavLink>
+﻿<MudNavMenu>
+	<MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home" IconColor="Color.Inherit" Href="" >Home</MudNavLink>
 	<MudNavGroup Icon="@Icons.Material.Filled.Handyman" Title="Ferramentas">
-		<MudNavLink Href="calcular" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.BarChart" IconColor="Color.Inherit">Quanto Custa</MudNavLink>
+		<MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.BarChart" IconColor="Color.Inherit" Href="configuracao">Configurações</MudNavLink>
+		<MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.BarChart" IconColor="Color.Inherit" Href="profissao">Profissões</MudNavLink>
+		<MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.BarChart" IconColor="Color.Inherit" Href="calcular">Quanto Custa</MudNavLink>
 	</MudNavGroup>
 	<MudNavGroup Icon="@Icons.Material.Filled.Verified" Title="Versão">
 		<MudNavLink>@(CoreAssembly<MainLayout>.AssemblyVersion)</MudNavLink>

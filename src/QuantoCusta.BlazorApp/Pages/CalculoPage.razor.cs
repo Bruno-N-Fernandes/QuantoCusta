@@ -12,7 +12,7 @@ namespace QuantoCusta.BlazorApp.Pages
 		[Inject]
 		private Repositorio Repositorio { get; set; }
 
-		private Config Config => Repositorio.Config;
+		private Configuracao Configuracao => Repositorio.Configuracao;
 
 		private Profissao Profissao { get; set; }
 
@@ -20,29 +20,16 @@ namespace QuantoCusta.BlazorApp.Pages
 
 		private bool ShowAll { get; set; }
 
-		private bool _expandedConfig = false;
-
-		private bool _expandedProfissao = false;
-
-		private void OnExpandCollapseConfigClick()
-		{
-			_expandedConfig = !_expandedConfig;
-		}
-		private void OnExpandCollapseProfissaoClick()
-		{
-			_expandedProfissao = !_expandedProfissao;
-		}
-
 		private void NotifyChange(IEnumerable<Profissao> profissao)
 		{
-			CalculoCusto = new CalculoCusto(Config, Profissao);
+			CalculoCusto = new CalculoCusto(Configuracao, Profissao);
 			StateHasChanged();
 		}
 
 		protected override async Task OnInitializedAsync()
 		{
 			Profissao = Repositorio.Profissoes.FirstOrDefault();
-			CalculoCusto = new CalculoCusto(Config, Profissao);
+			CalculoCusto = new CalculoCusto(Configuracao, Profissao);
 			await base.OnInitializedAsync();
 		}
 	}
