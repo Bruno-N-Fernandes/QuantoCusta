@@ -4,6 +4,8 @@
     <ToolBarContent>
         <MudText Typo="Typo.h6">Profissões</MudText>
         <MudSpacer />
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="e=>OpenPopup()">Incluir</MudButton>
+        <MudSpacer />
         <MudTextField @bind-Value="_searchString" Placeholder="Search" Adornment="Adornment.Start" Immediate="true" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
     </ToolBarContent>
     <Columns>
@@ -11,10 +13,17 @@
 		<PropertyColumn Property="x => x.Descricao" Title="Descrição" />
 		<PropertyColumn Property="x => x.PisoSalarial" Title="Piso Salarial" />
 		<PropertyColumn Property="x => x.TetoSalarial" Title="Teto Salarial" />
-        <PropertyColumn Property="x => x.PercentualAdicionalNoturno" Title="Percentual Adicional Noturno" />
-        <PropertyColumn Property="x => x.PercentualAdicionalPericulosidade" Title="Percentual Adicional Periculosidade" />
-        <PropertyColumn Property="x => x.PercentualAdicionalInsalubridade" Title="Percentual Adicional Insalubridade" />
         <PropertyColumn Property="x => x.QuantidadeDiasExpediente" Title="Quantidade de Dias de Expediente" />
+        <TemplateColumn CellClass="d-flex justify-end">
+            <CellTemplate>
+                <MudStack Row>
+                    <MudButton Size="@Size.Small" Variant="Variant.Filled" Color="Color.Primary" OnClick="e=>OpenPopup(context.Item, Mode.Mostrar)">Mostrar</MudButton>
+                    <MudButton Size="@Size.Small" Variant="Variant.Filled" Color="Color.Primary" OnClick="e=>OpenPopup(context.Item, Mode.Alterar)">Alterar</MudButton>
+                    <MudButton Size="@Size.Small" Variant="Variant.Filled" Color="Color.Primary" OnClick="e=>OpenPopup(context.Item, Mode.Excluir)">Excluir</MudButton>
+                </MudStack>
+            </CellTemplate>
+        </TemplateColumn>
+
     </Columns>
     <PagerContent>
         <MudDataGridPager T="Profissao" />
