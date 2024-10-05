@@ -1,16 +1,17 @@
 ﻿<PageTitle>Profissão</PageTitle>
 <MudDialog>
+	<TitleContent>
+		Profissão
+	</TitleContent>
 	<DialogContent>
-		<MudContainer MaxWidth="MaxWidth.Small">
-			<MudTextField @bind-Value="Profissao.CBO" Placeholder="CBO" Label="CBO" Variant="Variant.Outlined" />
-			<MudTextField @bind-Value="Profissao.Descricao" Placeholder="Descrição" Label="Descrição" Variant="Variant.Outlined" />
-			<MudNumericField Format="#,##0.00" @bind-Value="Profissao.PisoSalarial" Placeholder="Piso Salarial" Label="Piso Salarial" Variant="Variant.Outlined" Min="1" Step="10" />
-			<MudNumericField Format="#,##0.00" @bind-Value="Profissao.TetoSalarial" Placeholder="Teto Salarial" Label="Teto Salarial" Variant="Variant.Outlined" Min="1" Step="10" />
-			<MudNumericField Format="00" @bind-Value="Profissao.QuantidadeDiasExpediente" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="31" Step="1" />
-			<PercentualField @bind-Value="Profissao.PercentualAdicionalNoturno" Placeholder="Percentual de Adicional Noturno" Label="Percentual de Adicional Noturno" Variant="Variant.Outlined" />
-			<PercentualField @bind-Value="Profissao.PercentualAdicionalInsalubridade" Placeholder="Percentual de Adicional de Insalubridade" Label="Percentual de Adicional de Insalubridade" Variant="Variant.Outlined" />
-			<PercentualField @bind-Value="Profissao.PercentualAdicionalPericulosidade" Placeholder="Percentual de Adicional de Periculosidade" Label="Percentual de Adicional de Periculosidade" Variant="Variant.Outlined" />
-		</MudContainer>
+		<MudTextField @bind-Value="Profissao.CBO" Placeholder="CBO" Label="CBO" Variant="Variant.Outlined" />
+		<MudTextField @bind-Value="Profissao.Descricao" Placeholder="Descrição" Label="Descrição" Variant="Variant.Outlined" />
+		<MudNumericField Format="#,##0.00" @bind-Value="Profissao.PisoSalarial" Placeholder="Piso Salarial" Label="Piso Salarial" Variant="Variant.Outlined" Min="1" Step="10" />
+		<MudNumericField Format="#,##0.00" @bind-Value="Profissao.TetoSalarial" Placeholder="Teto Salarial" Label="Teto Salarial" Variant="Variant.Outlined" Min="1" Step="10" />
+		<MudNumericField Format="00" @bind-Value="Profissao.QuantidadeDiasExpediente" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="31" Step="1" />
+		<PercentualField @bind-Value="Profissao.PercentualAdicionalNoturno" Placeholder="Percentual de Adicional Noturno" Label="Percentual de Adicional Noturno" Variant="Variant.Outlined" />
+		<PercentualField @bind-Value="Profissao.PercentualAdicionalInsalubridade" Placeholder="Percentual de Adicional de Insalubridade" Label="Percentual de Adicional de Insalubridade" Variant="Variant.Outlined" />
+		<PercentualField @bind-Value="Profissao.PercentualAdicionalPericulosidade" Placeholder="Percentual de Adicional de Periculosidade" Label="Percentual de Adicional de Periculosidade" Variant="Variant.Outlined" />
 	</DialogContent>
 	<DialogActions>
 		<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Incluir" hidden=@(Mode != Mode.Incluir)>Incluir</MudButton>

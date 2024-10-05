@@ -12,8 +12,6 @@ namespace QuantoCusta.BlazorApp.Pages
 		[Inject]
 		private Repositorio Repositorio { get; set; }
 
-		private Configuracao Configuracao => Repositorio.Configuracao;
-
 		private Profissao Profissao { get; set; }
 
 		private CalculoCusto CalculoCusto { get; set; }
@@ -22,14 +20,14 @@ namespace QuantoCusta.BlazorApp.Pages
 
 		private void NotifyChange(IEnumerable<Profissao> profissao)
 		{
-			CalculoCusto = new CalculoCusto(Configuracao, Profissao);
+			CalculoCusto = new CalculoCusto(Repositorio.Configuracao, Profissao);
 			StateHasChanged();
 		}
 
 		protected override async Task OnInitializedAsync()
 		{
 			Profissao = Repositorio.Profissoes.FirstOrDefault();
-			CalculoCusto = new CalculoCusto(Configuracao, Profissao);
+			CalculoCusto = new CalculoCusto(Repositorio.Configuracao, Profissao);
 			await base.OnInitializedAsync();
 		}
 	}
