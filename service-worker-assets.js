@@ -77,7 +77,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-lcqv5SdxkbUWJ9c2v1+NhA3bufnFPhRbXVJfI+brQuY=",
+      "hash": "sha256-XDqHh18SbGaHMVmmwujK6ETvwWVJ+JMubNtG+8mHTuY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -177,7 +177,7 @@
       "url": "_framework\/Newtonsoft.Json.wasm"
     },
     {
-      "hash": "sha256-z6VnVaotdiTtDAQE2SOuOBBNN1ya8VXVoYLDqw1mSo4=",
+      "hash": "sha256-GnnAM8Nse+OC\/u2phiGGTxiNHMjfUYpeDkMq9Rb+B+w=",
       "url": "_framework\/QuantoCusta.BlazorApp.wasm"
     },
     {
@@ -377,5 +377,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "XJCtUK9h"
+  "version": "LJhv1DZ5"
 };
