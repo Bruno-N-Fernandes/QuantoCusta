@@ -1,13 +1,11 @@
-﻿<PageTitle>Quanto Custa</PageTitle>
+﻿@using QuantoCusta.BlazorApp.Components
+
+<PageTitle>Quanto Custa</PageTitle>
 
 <MudGrid>
 	<MudItem>
-		<MudSelect T="Profissao" @bind-Value="Profissao" Label="Profissão" Placeholder="Profissão" Variant="Variant.Outlined" Margin="Margin.Dense" Dense="true" Clearable="true" SelectedValuesChanged="NotifyChange">
-			@foreach (var profissao in Repositorio.Profissoes)
-			{
-				<MudSelectItem T="Profissao" Value="profissao">@($"{profissao.CBO} - {profissao.Descricao}")</MudSelectItem>
-			}
-		</MudSelect>
+		<MudDropDown T="Profissao" DataSource="Repositorio.Profissoes" GetText="x => x.CBO" @bind-Value="Profissao" Label="Profissão" SelectedValuesChanged="NotifyChange" Clearable="true"/>
+
 		<MudNumericField @bind-Value="CalculoCusto.RemuneracaoBase" Label="Remuneração Base" Variant="Variant.Outlined" Format="#,##0.00" />
 		<MudNumericField Format="00" @bind-Value="CalculoCusto.QuantidadeDiasExpediente" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="31" Step="1" />
 		<MudNumericField @bind-Value="CalculoCusto.PrecoPassagem" Placeholder="Preço da Passagem" Label="Preço da Passagem" Variant="Variant.Outlined" Min="0.01M" Step="0.01M" Format="#0.00" />

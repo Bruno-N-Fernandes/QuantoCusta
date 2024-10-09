@@ -18,8 +18,9 @@ namespace QuantoCusta.BlazorApp.Pages
 
 		private bool ShowAll { get; set; }
 
-		private void NotifyChange(IEnumerable<Profissao> profissao)
+		private void NotifyChange(IEnumerable<Profissao> profissoes)
 		{
+			Profissao = profissoes.FirstOrDefault();
 			CalculoCusto = new CalculoCusto(Repositorio.Configuracao, Profissao);
 			StateHasChanged();
 		}

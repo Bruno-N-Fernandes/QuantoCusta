@@ -1,0 +1,16 @@
+﻿@typeparam T
+
+<MudSelect T="T" @bind-Value=Value @attributes=AdditionalAttributes Label="@Label" Placeholder="@Label" Variant="Variant.Outlined" Margin="Margin.Dense" Dense="true" Clearable="@Clearable" SelectedValuesChanged="SelectedValuesChanged" >
+	@if(Clearable)
+	{
+		<MudSelectItem T="T" Value=default >Selecione</MudSelectItem>
+	}
+
+	@if (DataSource != null)
+	{
+		foreach (var item in DataSource)
+		{
+			<MudSelectItem T="T" Value="item">@GetText(item)</MudSelectItem>
+		}
+	} 
+</MudSelect>
