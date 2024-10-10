@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "QuantoCusta.BlazorApp",
   "resources": {
-    "hash": "sha256-HibyctgXI0c60uwYuRBPgR9sqlp37gz0PMYSSdxgQG8=",
+    "hash": "sha256-NfsJwk8edit6MD1MYyopAk26ET+Zn/RhoqdNPC021UU=",
     "jsModuleNative": {
       "dotnet.native.8.0.10.4xsnm8lwn6.js": "sha256-QVxMlY7ohmjgde/bZMA0dlWDAeuUP+tEfkiSdg4DFcE="
     },
@@ -39,9 +39,9 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-Ms2HR5Gpug/0uRAzdk4SUNT76Ml3CjFv9Jo+dUIMGac=",
       "Microsoft.JSInterop.wasm": "sha256-ERJCFl8W6ktOXMUgY+QX3+prMcAjvQ8V7U/GipVIHog=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-sLSiCKh0RQEV/2cl05tr7wOLWzExQfPZovvpqYLJduQ=",
-      "MudBlazor.wasm": "sha256-fmyLBrXnsn/ga6pf5MGYPD6wB6cj11WAAGxD670P3rA=",
+      "MudBlazor.wasm": "sha256-PCXoCvKLFto36KOOcp8AtbKzMdN54CS0xnVV4TvZVXQ=",
       "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
-      "QuantoCusta.BlazorApp.wasm": "sha256-ztcKE+eJelfSfP5eSQyYa1+pp2FG8CuXhsKbDVhnYcM=",
+      "QuantoCusta.BlazorApp.wasm": "sha256-sUNEB70dpHr9SO7GKG6TUGeE59zZrkO9RZUZhDvyx18=",
       "System.Collections.Concurrent.wasm": "sha256-UIm3A+2FOuk9QkV+5rZ7kjp4euwan8xGW7kIn7zSXRA=",
       "System.Collections.Immutable.wasm": "sha256-3cQnxmH2A3ryeKqU6z+2oQ/WQ5pUn4KQMTmKVHcybH4=",
       "System.Collections.NonGeneric.wasm": "sha256-XAzBYo5feCF1cXC2RIKytidyE3WPx8p/4McDy1y63t4=",
@@ -58,7 +58,7 @@
       "System.Drawing.Primitives.wasm": "sha256-/x8pwCQK3DVnSEiiFugDgJ+zstvo6lsLV/R9etzHchg=",
       "System.Drawing.wasm": "sha256-Nd8QsQc+z45wUb8JsxGDqbnpo2MU3T1xKMHVpCn0h2k=",
       "System.Linq.Expressions.wasm": "sha256-QpYpbhyGVJQTdM3s1n2qRyud6S+wQorkeMoAt1h1nIU=",
-      "System.Linq.wasm": "sha256-ohIZvFWNVNrY1y9jkCgVW/+1qFf3isrBWJghCZEekLQ=",
+      "System.Linq.wasm": "sha256-72uFrJE0bGSTQ0uXDZA/OWAZRWbJPRxPgh7xD5vTaC4=",
       "System.Memory.wasm": "sha256-99w3WH+y9WgCvCeQV3l8zs3wQtCg6E+gUsZjw4K7QSM=",
       "System.Net.Http.wasm": "sha256-ZISQI+5FMOUisfvNoQiwwqjRg90qpccFtCRz2el2puo=",
       "System.Net.Primitives.wasm": "sha256-qVxsE3U6sOnnu0P5A6oXLTbN6v1CQPzUJHnjIcGDkRg=",
