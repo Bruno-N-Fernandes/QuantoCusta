@@ -21,7 +21,22 @@ jobs:
         with:
           dotnet-version: 8.x
           include-prerelease: true
+          
+      - name: Find '#{CACHE_VERSION}' in 'src/QuantoCusta.BlazorApp/wwwroot/service-worker.published.js' and Replace to '${{ github.run_id }}'
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "#{CACHE_VERSION}"
+          replace: ${{ github.run_id }}
+          include: 'src/QuantoCusta.BlazorApp/wwwroot/service-worker.published.js'
+          regex: false
 
+      #- name: Find '#{BaseAddressUrl}' in '${{ env.APP_LOCATION }}/${{ env.IncludeFileToReplace }}' and Replace to '${{ env.BaseAddressUrl }}'
+      #  uses: jacobtomlinson/gha-find-replace@v3
+      #  with:
+      #    find: "#{BaseAddressUrl}"
+      #    replace: ${{ env.BaseAddressUrl }}
+      #    include: ${{ env.APP_LOCATION }}/${{ env.IncludeFileToReplace }}
+      #    regex: false
 
       # publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
