@@ -4,7 +4,6 @@ using QuantoCusta.BlazorApp.Code;
 using QuantoCusta.BlazorApp.Popups;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace QuantoCusta.BlazorApp.Pages

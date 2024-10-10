@@ -23,10 +23,13 @@ namespace QuantoCusta.BlazorApp.Code
 				Descricao = "Atendente",
 				PisoSalarial = 1907.49M,
 				TetoSalarial = 1907.49M,
+				QuantidadeDiasExpediente = 27,
+				JornadaDeTrabalhoDiaria = 8,
+				CargaHorariaMensal = 220,
 				PercentualAdicionalNoturno = 0.20M,
 				PercentualAdicionalPericulosidade = 0.20M,
 				PercentualAdicionalInsalubridade = 0.20M,
-				QuantidadeDiasExpediente = 27,
+				PercentualAdicionalHorasExtras = 0.50M,
 			};
 
 			yield return new Profissao
@@ -35,10 +38,13 @@ namespace QuantoCusta.BlazorApp.Code
 				Descricao = "Frentista",
 				PisoSalarial = 1977.40M,
 				TetoSalarial = 1977.40M,
+				QuantidadeDiasExpediente = 27,
+				JornadaDeTrabalhoDiaria = 8,
+				CargaHorariaMensal = 220,
 				PercentualAdicionalNoturno = 0.20M,
 				PercentualAdicionalPericulosidade = 0.20M,
 				PercentualAdicionalInsalubridade = 0.20M,
-				QuantidadeDiasExpediente = 27,
+				PercentualAdicionalHorasExtras = 0.50M,
 			};
 		}
 	}

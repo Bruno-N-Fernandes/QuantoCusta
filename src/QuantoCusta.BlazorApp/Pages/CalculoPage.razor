@@ -1,15 +1,18 @@
 ﻿<PageTitle>Quanto Custa</PageTitle>
 
 <MudPaper Class="d-flex flex-column align-center pa-2 ma-2" Elevation="3">
-	<MudPagination Color="Color.Primary" @bind-Selected="@Page" ShowPageButtons="false" ShowFirstButton="true" ShowLastButton="true" Rectangular="true" Size="Size.Large" Variant="Variant.Outlined" Count="7" />
+	<MudText>Saiba quanto custa contratar um funcionário para o seu negócio</MudText>
+	<MudPagination Count="8" @bind-Selected="@Page" ShowPageButtons="false" ShowFirstButton="true" ShowLastButton="true" Rectangular="true" Size="Size.Large" Variant="Variant.Outlined" Color="Color.Primary" />
 </MudPaper>
 
 <MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 1)">
-	<MudDropDown T="Profissao" DataSource="Repositorio.Profissoes" GetText="@(x => $"{x.CBO} - {x.Descricao}")" @bind-Value="Profissao" Label="Profissão" SelectedValuesChanged="NotifyChange" Clearable="true" />
-	<MudNumericField  ReadOnly="true" @bind-Value="Profissao.PisoSalarial" Label="Piso Salarial" Variant="Variant.Outlined" Format="#,##0.00" />
-	<MudNumericField  ReadOnly="true" @bind-Value="Profissao.TetoSalarial" Label="Teto Salarial" Variant="Variant.Outlined" Format="#,##0.00" />
+	<MudDropDown T="Profissao" DataSource="Repositorio.Profissoes" GetText="@(x => $"{x.CBO} - {x.Descricao}")" @bind-Value="Profissao" Label="Profissão" SelectedValuesChanged="NotifyChange" />
+	<MudNumericField ReadOnly="true" @bind-Value="Profissao.PisoSalarial" Label="Piso Salarial" Variant="Variant.Outlined" Format="#,##0.00" />
+	<MudNumericField ReadOnly="true" @bind-Value="Profissao.TetoSalarial" Label="Teto Salarial" Variant="Variant.Outlined" Format="#,##0.00" />
+	<MudNumericField @bind-Value="CalculoCusto.QuantidadeDiasExpediente" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="24" Step="1" Format="00" />
+	<MudNumericField @bind-Value="CalculoCusto.JornadaDeTrabalhoDiaria" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="31" Step="1" Format="00" />
+	<MudNumericField @bind-Value="CalculoCusto.CargaHorariaMensal" Placeholder="Carga Horária (Mensal)" Label="Carga Horária (Mensal)" Variant="Variant.Outlined" Min="4" Max="360" Step="4" Format="000" />
 	<MudNumericField @bind-Value="CalculoCusto.RemuneracaoBase" Label="Valor de Contratação (Remuneração Base)" Variant="Variant.Outlined" Format="#,##0.00" />
-	<MudNumericField Format="00" @bind-Value="CalculoCusto.QuantidadeDiasExpediente" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="31" Step="1" />
 </MudPaper>
 <MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 2)">
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.RemuneracaoTotal" Label="Remuneração Total" Variant="Variant.Outlined" Format="#,##0.00" />
@@ -37,18 +40,31 @@
 </MudPaper>
 <MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 5)">
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.RemuneracaoTotal" Label="Remuneração Total" Variant="Variant.Outlined" Format="#,##0.00" />
+	<MudSwitch @bind-Value="CalculoCusto.TemAdicionalHorasExtras" ThumbIcon="@(CalculoCusto.TemAdicionalHorasExtras ? Icons.Material.Filled.Done : Icons.Material.Filled.Close)" ThumbIconColor="@(CalculoCusto.TemAdicionalHorasExtras ? Color.Success: Color.Error)" Color="Color.Error">Tem Adicional de Horas Extras</MudSwitch>
+	<MudPaper hidden="@(!CalculoCusto.TemAdicionalHorasExtras)">
+		<MudNumericField ReadOnly="true" Value="CalculoCusto.ValorSalarioPorMinuto" Placeholder="Valor Salário Por Minuto" Label="Valor Salário Por Minuto" Variant="Variant.Outlined" Format="#,##0.00" />
+		<MudNumericField ReadOnly="true" Value="CalculoCusto.ValorSalarioPorHora" Placeholder="Valor Salário Por Hora" Label="Valor Salário Por Hora" Variant="Variant.Outlined" Format="#,##0.00" />
+		<MudTimePicker @bind-Time="CalculoCusto.MediaHorasExtras" Label="Quantidade de Horas Extras (Média mensal)" PickerVariant="PickerVariant.Inline" Editable="true" />
+		<MudNumericField ReadOnly="true" Value="CalculoCusto.QuantidadeHorasExtras" Placeholder="Quantidade de Horas Extras (Mensal)" Label="Quantidade de Horas Extras (Mensal)" Variant="Variant.Outlined" Min="0" Max="360" Step="1" Format="00" />
+		<PercentualField @bind-Value="CalculoCusto.PercentualAdicionalHorasExtras" Label="Percentual de Adicional Horas Extras" Variant="Variant.Outlined" />
+		<MudNumericField ReadOnly="true" Value="CalculoCusto.AdicionalHorasExtras" Label="Valor do Adicional das Horas Extras" Variant="Variant.Outlined" Format="#,##0.00" />
+	</MudPaper>
+</MudPaper>
+<MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 6)">
+	<MudNumericField ReadOnly="true" Value="CalculoCusto.RemuneracaoTotal" Label="Remuneração Total" Variant="Variant.Outlined" Format="#,##0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.Provisao13Salario" Label="Provisão Mensal de 13º. Salário" Variant="Variant.Outlined" Format="#,##0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.ProvisaoFerias" Label="Provisão Mensal de Férias" Variant="Variant.Outlined" Format="#,##0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.ProvisaoAdicionalFerias" Label="Provisão Mensal do Adicional de Férias" Variant="Variant.Outlined" Format="#,##0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.RemuneracaoProvisao" Label="Remuneração Total + Provisões Mensais" Variant="Variant.Outlined" Format="#,##0.00" />
 </MudPaper>
-<MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 6)">
+<MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 7)">
+	<MudNumericField @bind-Value="CalculoCusto.QuantidadeDiasExpediente" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="24" Step="1" Format="00" />
 	<MudNumericField @bind-Value="CalculoCusto.PrecoPassagem" Placeholder="Preço da Passagem" Label="Preço da Passagem" Variant="Variant.Outlined" Min="0.01M" Step="0.01M" Format="#0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.CustoTransporte" Label="Custo Total de Transporte" Variant="Variant.Outlined" Format="#,##0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.TransporteFuncionario" Label="Vale Transporte (Responsabilidade do Funcionário)" Variant="Variant.Outlined" Format="#,##0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.ValorVT" Label="Vale Transporte (Responsabilidade do Empregador)" Variant="Variant.Outlined" Format="#,##0.00" />
 </MudPaper>
-<MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 7)">
+<MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 8)">
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.RemuneracaoProvisao" Label="Remuneração Total + Provisões Mensais" Variant="Variant.Outlined" Format="#,##0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.ValorINSS" Label="Valor do INSS" Variant="Variant.Outlined" Format="#,##0.00" />
 	<MudNumericField ReadOnly="true" Value="CalculoCusto.ValorFGTS" Label="Valor do FGTS" Variant="Variant.Outlined" Format="#,##0.00" />
