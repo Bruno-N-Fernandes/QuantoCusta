@@ -2,7 +2,7 @@
 
 <MudPaper Class="d-flex flex-column align-center pa-2 ma-2" Elevation="3">
 	<MudText>Saiba quanto custa contratar um funcionário para o seu negócio</MudText>
-	<MudPagination Count="8" @bind-Selected="@Page" ShowPageButtons="false" ShowFirstButton="true" ShowLastButton="true" Rectangular="true" Size="Size.Large" Variant="Variant.Outlined" Color="Color.Primary" />
+	<MudPagination Count="8" @bind-Selected="@Page" ShowPageButtons="false" Rectangular="true" Size="Size.Large" Variant="Variant.Outlined" Color="Color.Primary" />
 </MudPaper>
 
 <MudPaper Class="pa-16 ma-2" Elevation="3" hidden="@(Page != 1)">
