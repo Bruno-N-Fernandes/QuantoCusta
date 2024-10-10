@@ -16,7 +16,7 @@ namespace QuantoCusta.BlazorApp.Pages
 
 		private CalculoCusto CalculoCusto { get; set; }
 
-		private bool ShowAll { get; set; }
+		private int Page { get; set; } = 1;
 
 		private void NotifyChange(IEnumerable<Profissao> profissoes)
 		{
