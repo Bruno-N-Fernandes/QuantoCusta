@@ -27,8 +27,11 @@ jobs:
         with:
           find: "#{CACHE_VERSION}"
           replace: ${{ github.run_id }}
-          include: [ 'src/QuantoCusta.BlazorApp/wwwroot/*.js', 'src/QuantoCusta.BlazorApp/wwwroot/index.html' ]
+          include: 'src/QuantoCusta.BlazorApp/wwwroot/*.js'
           regex: false
+
+      - name: Find '#{CACHE_VERSION}' in 'src/QuantoCusta.BlazorApp/wwwroot/index.html' and Replace to '${{ github.run_id }}'
+        run: sed -i 's/#{CACHE_VERSION}/${{ github.run_id }}/g' src/QuantoCusta.BlazorApp/wwwroot/index.html
 
       #- name: Find '#{BaseAddressUrl}' in '${{ env.APP_LOCATION }}/${{ env.IncludeFileToReplace }}' and Replace to '${{ env.BaseAddressUrl }}'
       #  uses: jacobtomlinson/gha-find-replace@v3
