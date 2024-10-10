@@ -29,7 +29,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-Dz30nsc81b5PnJ+qJACC0hj95EUr0yc\/UZdCNDHLgII=",
+      "hash": "sha256-dgCeBJfDFCvfZn5fQ7HUuZZCLwHCkcIUC8EQikZxI04=",
       "url": "index.html"
     },
     {
@@ -43,6 +43,10 @@
     {
       "hash": "sha256-6HP\/KO49Pn7zQ9jS\/Z4NhBBwLo9+oAjL3jlBjKmVA8g=",
       "url": "staticwebapp.config.json"
+    },
+    {
+      "hash": "sha256-nOo7uwzXfz6\/Bocf7ydb0gd8SFExSBq1W\/9jl5I0Y5g=",
+      "url": "version.js"
     },
     {
       "hash": "sha256-gvHfnndfEu1tRf0rFb5988rWq7ITIotOaE8+AMbKYbc=",
@@ -77,7 +81,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-+wOu+UMSxE+Qct3tT8vrMJ90V40owG51KdHs2icazO0=",
+      "hash": "sha256-qbevztWnNg\/EUemDFU39MC47EEXyRgRTRFngVGMtNdI=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -177,7 +181,7 @@
       "url": "_framework\/Newtonsoft.Json.wasm"
     },
     {
-      "hash": "sha256-jJTmhAgTJeseyDh9TCddbiFYHx2uA465o\/fwt5JHB8A=",
+      "hash": "sha256-8USlIjYlHd0KPIHAQix9oUdTKeFZnjVJMG8\/8tvxk6Q=",
       "url": "_framework\/QuantoCusta.BlazorApp.wasm"
     },
     {
@@ -377,5 +381,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "V4UArULf"
+  "version": "u1uae\/Nr"
 };
