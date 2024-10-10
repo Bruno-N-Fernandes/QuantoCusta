@@ -27,7 +27,7 @@ jobs:
         with:
           find: "#{CACHE_VERSION}"
           replace: ${{ github.run_id }}
-          include: 'src/QuantoCusta.BlazorApp/wwwroot/service-worker.published.js'
+          include: 'src/QuantoCusta.BlazorApp/wwwroot/*.js'
           regex: false
 
       #- name: Find '#{BaseAddressUrl}' in '${{ env.APP_LOCATION }}/${{ env.IncludeFileToReplace }}' and Replace to '${{ env.BaseAddressUrl }}'
