@@ -1,0 +1,82 @@
+﻿<html>
+<head>
+	<style>
+		#myProgress {
+			width: 100vw;
+			height: 30px;
+			background-color: #ddd;
+			display: block;
+		}
+
+		#myBar {
+			width: 1%;
+			height: 30px;
+			background-color: black;
+			display: block;
+		}
+
+		.spinner-border {
+			height: 25px;
+			width: 25px;
+			border: 5px solid black;
+			border-top: 5px solid white;
+			border-radius: 50%;
+			-webkit-animation: spin 1.2s linear infinite;
+			animation: spin 1.2s linear infinite;
+		}
+
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div style="position:absolute; top:30vh; width:100%; text-align:center">
+		<h1 id="title">Title</h1>
+		<div style="display:flex; gap:10px; justify-content:center; align-items:center">
+			<div class="spinner-border" role="status"></div>
+			A aplicação está sendo iniciada...
+		</div>
+		<br /> <br />
+		<div id="myProgress">
+			<div id="myBar"></div>
+		</div>
+	</div>
+
+	<script>
+		const queryString = new URLSearchParams(window.location.search);
+		const h1Title = document.getElementById("title");
+		h1Title.innerText = queryString.get("title");
+
+		function move() {
+			const elem = document.getElementById("myBar");
+			let width = 0;
+			frame();
+			function frame() {
+				if (width < 100) {
+					width += 0.1;
+					elem.style.width = width + "%";
+					setTimeout(() => frame(), 5 + width / 2);
+				}
+			}
+		}
+		move();
+	</script>
+</body>
+</html>
