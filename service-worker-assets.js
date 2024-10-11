@@ -33,7 +33,7 @@
       "url": "assets\/loading.html"
     },
     {
-      "hash": "sha256-A2Psy1LRb+Ko+W+R+gG2R3OmKAc8SlVPnwK\/j5WL2kw=",
+      "hash": "sha256-U7wVCgkzhJAJvWfcbb36eSYAfzKIJYIFt+GWMyhNf\/0=",
       "url": "index.html"
     },
     {
@@ -77,7 +77,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-u1w4lJjoq+eQ+dYM1fUaSLbtitT4WyebtYmF7Dau+Sc=",
+      "hash": "sha256-d\/H+j0x66VTU+PxG0bWU8G8VqvfV9iBc7XZXJ4LqKi8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -169,7 +169,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
-      "hash": "sha256-PCXoCvKLFto36KOOcp8AtbKzMdN54CS0xnVV4TvZVXQ=",
+      "hash": "sha256-bvVaU95JTvcnedI4q9IBosP7oHipq\/FKGnHTLDV+12k=",
       "url": "_framework\/MudBlazor.wasm"
     },
     {
@@ -177,7 +177,7 @@
       "url": "_framework\/Newtonsoft.Json.wasm"
     },
     {
-      "hash": "sha256-xX\/NZzaCtKRiyRV2gkG6tJnxzyWugREJJAvBky6XyCo=",
+      "hash": "sha256-xagzDe2Vwt9p2u7dNKYHMEXSelwZkZjArN6BDTubAlQ=",
       "url": "_framework\/QuantoCusta.BlazorApp.wasm"
     },
     {
@@ -245,7 +245,7 @@
       "url": "_framework\/System.Linq.Expressions.wasm"
     },
     {
-      "hash": "sha256-72uFrJE0bGSTQ0uXDZA\/OWAZRWbJPRxPgh7xD5vTaC4=",
+      "hash": "sha256-ohIZvFWNVNrY1y9jkCgVW\/+1qFf3isrBWJghCZEekLQ=",
       "url": "_framework\/System.Linq.wasm"
     },
     {
@@ -265,7 +265,7 @@
       "url": "_framework\/System.ObjectModel.wasm"
     },
     {
-      "hash": "sha256-m++mL5XVoKdaStI\/UknOuz0UqowemsNN7LxC7Kzdts8=",
+      "hash": "sha256-kFjfHupd+CilaJtxv5DMQcyDuIqahF1WLYDEWr5ywyk=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -365,7 +365,7 @@
       "url": "appsettings.json"
     },
     {
-      "hash": "sha256-peCN0IkH9GDMp2tuhyfKcsUZdIF8hWgZ+Zp4qnnqO+Q=",
+      "hash": "sha256-6zkaDXC0wtxpX6Nj2ahPDPT9is\/Is1BfEJtDaP755SU=",
       "url": "QuantoCusta.BlazorApp.styles.css"
     },
     {
@@ -377,5 +377,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "XrLi\/uux"
+  "version": "PDz8ZBUk"
 };
