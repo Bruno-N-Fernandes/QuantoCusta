@@ -9,7 +9,8 @@
 	<MudAppBar Dense Elevation="1">
 		<MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(e => DrawerToggle())" />
 		<MudToggleIconButton @bind-Toggled="@DarkModeThemeEnabled" Icon="@Icons.Material.Filled.LightMode" Variant="Variant.Filled" Color="Color.Primary" ToggledIcon="@Icons.Material.Filled.DarkMode" />
-		<TopBar OnChange="NotifyChange" />
+		<MudSpacer />
+		<MudFab StartIcon="@Icons.Material.Filled.Verified" Size="Size.Small" Label="@(CoreAssembly<MainLayout>.AssemblyVersion)" DropShadow="false" />
 	</MudAppBar>
 	<MudDrawer @bind-Open="DrawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
 		<SideBarMenu />

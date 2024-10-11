@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuantoCusta.BlazorApp.Pages
 {
-	[Route("/calcular")]
+	[Route("/")]
 	public partial class CalculoPage
 	{
 		[Inject]
