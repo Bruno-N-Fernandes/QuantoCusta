@@ -4,7 +4,7 @@
 	<MudText>Saiba quanto custa contratar um funcionário para o seu negócio</MudText>
 </MudPaper>
 
-<MudTabs Elevation="2" Rounded="true" Centered="true" Border="true" Outlined="true"  MinimumTabWidth="20px" AlwaysShowScrollButtons="true" PrevIcon="@Icons.Material.Filled.SkipPrevious" NextIcon="@Icons.Material.Filled.SkipNext">
+<MudTabs Elevation="2" Rounded="true" Centered="true" Border="true" Outlined="true" MinimumTabWidth="20px" AlwaysShowScrollButtons="true" PrevIcon="@Icons.Material.Filled.SkipPrevious" NextIcon="@Icons.Material.Filled.SkipNext">
 	<MudTabPanel Text="Profissão" ToolTip="Selecione a profissão da pessoa que você gostaria de contratar">
 		<MudText Align="Align.Center">Selecione a profissão da pessoa que você gostaria de contratar</MudText>
 		<MudDropDown T="Profissao" DataSource="Repositorio.Profissoes" GetText="@(x => $"{x.CBO} - {x.Descricao}")" @bind-Value="Profissao" Label="Profissão" SelectedValuesChanged="NotifyChange" />
