@@ -1,6 +1,8 @@
-﻿<PageTitle>Profissão</PageTitle>
-<MudDialog>
-	<TitleContent>Profissão </TitleContent>
+﻿<MudDialog Style="height: 400px">
+	<TitleContent>
+		<MudText Typo="Typo.h6">@MudDialog.Title</MudText>
+	</TitleContent>
+
 	<DialogContent>
 		<MudTextField    Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.CBO" Placeholder="CBO" Label="CBO" Variant="Variant.Outlined" />
 		<MudTextField    Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.Descricao" Placeholder="Descrição" Label="Descrição" Variant="Variant.Outlined" />
@@ -14,6 +16,7 @@
 		<PercentualField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalPericulosidade" Placeholder="Percentual de Adicional de Periculosidade" Label="Percentual de Adicional de Periculosidade" Variant="Variant.Outlined" />
 		<PercentualField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalHorasExtras" Placeholder="Percentual de Adicional de Horas Extras" Label="Percentual de Adicional de Horas Extras" Variant="Variant.Outlined" />
 	</DialogContent>
+
 	<DialogActions>
 		<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Incluir" hidden=@(Mode != Mode.Incluir)>Incluir</MudButton>
 		<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Alterar" hidden=@(Mode != Mode.Alterar)>Alterar</MudButton>
