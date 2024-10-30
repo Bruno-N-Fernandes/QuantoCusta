@@ -33,7 +33,7 @@
       "url": "assets\/loading.html"
     },
     {
-      "hash": "sha256-eR7Ut3v34wNJmvYUSXz2RRFzK8g1BO\/23xMlTh\/tnYA=",
+      "hash": "sha256-PCTXr8MZeFOUzZ68LsKGoaEdLEsF3AuoC+hTnUC3+YE=",
       "url": "index.html"
     },
     {
@@ -77,7 +77,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-YKk0O4OXFQH9iuuaoUbqSPRn2nmm5Fa4+Zqsr6p3\/5o=",
+      "hash": "sha256-qSHrGbZdu2hJ81LSLlcbE3+wQNn5wsiBvMfvpVOMlNE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -177,7 +177,7 @@
       "url": "_framework\/Newtonsoft.Json.wasm"
     },
     {
-      "hash": "sha256-Ysnkm2gsEng94K9v0cpcxmP9tPoicSDU1LJQuZ5Z6F8=",
+      "hash": "sha256-RkKv3+8QhBvpWx5bSLAxcklpk+Ac7uRoXO6pJlLRZXQ=",
       "url": "_framework\/QuantoCusta.BlazorApp.wasm"
     },
     {
@@ -377,5 +377,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "O2jJqp0Z"
+  "version": "s30urlcf"
 };
