@@ -4,17 +4,17 @@
 	</TitleContent>
 
 	<DialogContent>
-		<MudTextField    Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.CBO" Placeholder="CBO" Label="CBO" Variant="Variant.Outlined" />
-		<MudTextField    Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.Descricao" Placeholder="Descrição" Label="Descrição" Variant="Variant.Outlined" />
-		<MudNumericField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PisoSalarial" Placeholder="Piso Salarial" Label="Piso Salarial" Variant="Variant.Outlined" Min="1" Step="10" Format="#,##0.00" />
-		<MudNumericField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.TetoSalarial" Placeholder="Teto Salarial" Label="Teto Salarial" Variant="Variant.Outlined" Min="1" Step="10" Format="#,##0.00" />
-		<MudNumericField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.QuantidadeDiasExpediente" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="31" Step="1" Format="00" TextChanged="Profissao.CalcularCargaHorariaMensal" />
-		<MudNumericField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.JornadaDeTrabalhoDiaria" Placeholder="Jornada De Trabalho Diária (Horas)" Label="Jornada De Trabalho Diária (Horas)" Variant="Variant.Outlined" Min="1" Max="24" Step="1" Format="00" TextChanged="Profissao.CalcularCargaHorariaMensal" />
-		<MudNumericField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.CargaHorariaMensal" Placeholder="Carga Horária Mensal" Label="Carga Horária Mensal" Variant="Variant.Outlined" Min="4" Max="360" Step="4" Format="000" />
-		<PercentualField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalNoturno" Placeholder="Percentual de Adicional Noturno" Label="Percentual de Adicional Noturno" Variant="Variant.Outlined" />
-		<PercentualField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalInsalubridade" Placeholder="Percentual de Adicional de Insalubridade" Label="Percentual de Adicional de Insalubridade" Variant="Variant.Outlined" />
-		<PercentualField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalPericulosidade" Placeholder="Percentual de Adicional de Periculosidade" Label="Percentual de Adicional de Periculosidade" Variant="Variant.Outlined" />
-		<PercentualField Readonly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalHorasExtras" Placeholder="Percentual de Adicional de Horas Extras" Label="Percentual de Adicional de Horas Extras" Variant="Variant.Outlined" />
+		<MudTextField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.CBO" Placeholder="CBO" Label="CBO" Variant="Variant.Outlined" />
+		<MudTextField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.Descricao" Placeholder="Descrição" Label="Descrição" Variant="Variant.Outlined" />
+		<MudNumericField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PisoSalarial" Placeholder="Piso Salarial" Label="Piso Salarial" Variant="Variant.Outlined" Min="1" Step="10" Format="#,##0.00" />
+		<MudNumericField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.TetoSalarial" Placeholder="Teto Salarial" Label="Teto Salarial" Variant="Variant.Outlined" Min="1" Step="10" Format="#,##0.00" />
+		<MudNumericField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.QuantidadeDiasExpediente" Placeholder="Quantidade de Dias de Expediente (Mensal)" Label="Quantidade de Dias de Expediente (Mensal)" Variant="Variant.Outlined" Min="1" Max="31" Step="1" Format="00" TextChanged="Profissao.CalcularCargaHorariaMensal" />
+		<MudNumericField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.JornadaDeTrabalhoDiaria" Placeholder="Jornada De Trabalho Diária (Horas)" Label="Jornada De Trabalho Diária (Horas)" Variant="Variant.Outlined" Min="1" Max="24" Step="1" Format="00" TextChanged="Profissao.CalcularCargaHorariaMensal" />
+		<MudNumericField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.CargaHorariaMensal" Placeholder="Carga Horária Mensal" Label="Carga Horária Mensal" Variant="Variant.Outlined" Min="4" Max="360" Step="4" Format="000" />
+		<PercentualField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalNoturno" Placeholder="Percentual de Adicional Noturno" Label="Percentual de Adicional Noturno" Variant="Variant.Outlined" />
+		<PercentualField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalInsalubridade" Placeholder="Percentual de Adicional de Insalubridade" Label="Percentual de Adicional de Insalubridade" Variant="Variant.Outlined" />
+		<PercentualField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalPericulosidade" Placeholder="Percentual de Adicional de Periculosidade" Label="Percentual de Adicional de Periculosidade" Variant="Variant.Outlined" />
+		<PercentualField ReadOnly=@Mode.In(Mode.Mostrar, Mode.Excluir) @bind-Value="Profissao.PercentualAdicionalHorasExtras" Placeholder="Percentual de Adicional de Horas Extras" Label="Percentual de Adicional de Horas Extras" Variant="Variant.Outlined" />
 	</DialogContent>
 
 	<DialogActions>
