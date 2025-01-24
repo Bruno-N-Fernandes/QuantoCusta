@@ -1,0 +1,54 @@
+﻿<PageTitle>Quanto Custa</PageTitle>
+
+<MudPaper Class="pa-16 ma-2" Elevation="3">
+	<MudText>@RespostaFormulario.Formulario.Nome</MudText>
+	<MudText Typo="Typo.body2">@RespostaFormulario.Formulario.Descricao</MudText>
+	<MudText Typo="Typo.body2">@RespostaFormulario.DataResposta</MudText>
+	@foreach (var resposta in RespostaFormulario.Respostas)
+	{
+		<MudCard>
+			<MudCardContent>
+				<MudText>@resposta.Pergunta.Texto</MudText>
+				@if (resposta.Pergunta.TipoResposta.Nome == "int")
+				{
+					<MudNumericField @bind-Value="resposta.IntValue" Format="N0" />
+				}
+				else if (resposta.Pergunta.TipoResposta.Nome == "decimal")
+				{
+					<MudNumericField @bind-Value="resposta.DecimalValue" Format="N3" />
+				}
+				else if (resposta.Pergunta.TipoResposta.Nome == "DateTime")
+				{
+					<MudDatePicker PickerVariant="PickerVariant.Dialog" @bind-Date="resposta.DateTimeValue" />
+				}
+				else if (resposta.Pergunta.TipoResposta.Nome == "string")
+				{
+					<MudTextField @bind-Value="resposta.StringValue" />
+				}
+				else if (resposta.Pergunta.TipoResposta.Nome == "SimENao")
+				{
+					<MudSwitch @bind-Value="resposta.BoolValue"></MudSwitch>
+				}
+				else if (resposta.Pergunta.TipoResposta.Nome == "SimENaoNaoLembro")
+				{
+					<MudSelect @bind-Value="resposta.StringValue">
+						@foreach (var opcao in resposta.Pergunta.TipoResposta.OpcoesResposta)
+						{
+							<MudSelectItem T="string" Value="@opcao.Valor">@opcao.Texto</MudSelectItem>
+						}
+					</MudSelect>
+				}
+				else if (resposta.Pergunta.TipoResposta.Nome == "SimNaoTalvez")
+				{
+					<MudRadioGroup @bind-Value="resposta.StringValue">
+						@foreach (var opcao in resposta.Pergunta.TipoResposta.OpcoesResposta)
+						{
+							<MudRadio T="string" Value="@opcao.Valor" Color="Color.Primary">@opcao.Texto</MudRadio>
+						}
+					</MudRadioGroup>
+				}
+			</MudCardContent>
+		</MudCard>
+	}
+</MudPaper>
+<MultilineString Value="@Json" />
